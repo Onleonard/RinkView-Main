@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Versions Hub - Modernes Portal</title>
-    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <!-- App-Logik -->
     <script>
         function appData() {
@@ -48,25 +45,20 @@
             }
         }
     </script>
-
     <!-- Alpine.js mit defer -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        
         body {
             font-family: 'Inter', sans-serif;
             background-color: #020617;
         }
-
         .glass {
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .custom-scrollbar::-webkit-scrollbar {
             width: 5px;
         }
@@ -77,7 +69,6 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
         }
-
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -88,13 +79,10 @@
     </style>
 </head>
 <body class="text-slate-200 overflow-x-hidden" x-data="appData()">
-
     <!-- Hintergrund Effekte -->
     <div class="fixed top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-cyan-600/10 blur-[120px] pointer-events-none"></div>
     <div class="fixed bottom-[-10%] right-[-10%] w-[40vw] h-[40vw] rounded-full bg-blue-600/10 blur-[120px] pointer-events-none"></div>
-
     <div class="relative z-10 max-w-4xl mx-auto px-4 py-16 flex flex-col gap-12">
-        
         <!-- Header -->
         <header class="text-center space-y-4 animate-up">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium mb-4">
@@ -107,17 +95,12 @@
                 Offizielle Dokumentation und Anmerkungen des Verfassers zu jedem Release.
             </p>
         </header>
-
         <!-- Liste der Versionen -->
         <div class="space-y-10 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
-            
             <template x-for="(version, index) in versions" :key="version.id">
                 <div class="relative z-10 animate-up" :style="'animation-delay: ' + (index * 150) + 'ms'">
-                    
                     <div class="absolute -inset-0.5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur opacity-10 transition duration-500 group-hover:opacity-30"></div>
-                    
                     <div class="relative glass rounded-2xl p-6 md:p-8 flex flex-col gap-6" x-data="{ activeTab: 'details' }">
-                        
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                             <div>
                                 <div class="flex items-center gap-3 mb-2">
@@ -133,14 +116,11 @@
                                     <span x-text="version.date"></span>
                                 </div>
                             </div>
-
                             <a :href="version.link" target="_blank" class="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]">
                                 Öffnen <i data-lucide="external-link" class="w-4 h-4"></i>
                             </a>
                         </div>
-
                         <hr class="border-white/5">
-
                         <!-- Tabs -->
                         <div class="flex gap-4 p-1 bg-white/5 rounded-xl">
                             <button @click="activeTab = 'details'" 
@@ -152,7 +132,6 @@
                                 Anmerkungen <span class="bg-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded-full text-[10px]" x-text="version.comments.length"></span>
                             </button>
                         </div>
-
                         <!-- Content Bereich -->
                         <div class="min-h-[220px]">
                             <!-- Details Tab -->
@@ -180,7 +159,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                             <!-- Kommentare Tab (Nur Anzeige) -->
                             <div x-show="activeTab === 'comments'" class="flex flex-col h-full space-y-4">
                                 <div class="space-y-3 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
@@ -202,13 +180,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </template>
-
         </div>
-
         <footer class="text-center pt-8 border-t border-white/5 text-slate-600 text-xs">
             <p>&copy; 2026 Versions Hub - Nur autorisierte Einträge</p>
         </footer>
