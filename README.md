@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Versions Hub - Modernes Portal</title>
+    <title>RinkView</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,24 +17,24 @@
             return {
                 versions: [
                     {
-                        id: "v3.0.0",
-                        name: "Project Nova Release",
+                        id: "v1.0",
+                        name: "RinkView - KEV Edition",
                         date: "06. April 2026",
-                        status: "Stable",
-                        link: "#",
-                        whatsNew: ["Modernes Glassmorphism UI", "KI-Integration", "Cloud Sync"],
-                        bugFixes: ["Mobile Fixes", "Memory Leak behoben"],
+                        status: "BETA",
+                        link: "https://onleonard.github.io/RinkView-KEV/",
+                        whatsNew: ["1,2,3 / Overtime usw.", "Tor Animation für KEV","Upload von KEV Hymne erforderlich", "Gegner Team Name und Farbe", "Tor Gast", "Animation abbrechen Button im Panel"],
+                        bugFixes: ["none"],
                         comments: [
-                            { id: 1, user: "Verfasser", text: "Dies ist der finale Build für dieses Quartal. Alle Core-Features sind stabil.", time: "Vor 2 Std." },
-                            { id: 2, user: "Verfasser", text: "Hinweis: Das Update benötigt mindestens 500MB freien Speicher.", time: "Vor 1 Std." }
+                            { id: 1, user: "Verfasser", text: "Wenn man Profil der Gegner ändern möchte muss mna aktuell noch den Code verändern. ", time: "6.4.26 - 21:11" },
+                            { id: 2, user: "Verfasser", text: "Viel Spaß ig lol", time: "Leck meine Eier" }
                         ]
                     },
                     {
                         id: "v2.8.0",
-                        name: "Speed Update",
-                        date: "20. März 2026",
-                        status: "Update",
-                        link: "#",
+                        name: "Platzhalter",
+                        date: "Platzhalter",
+                        status: "Moin",
+                        link: "lol",
                         whatsNew: ["3x schnelleres Laden", "Neues Dashboard"],
                         bugFixes: ["Safari Bugfix"],
                         comments: [
@@ -98,13 +98,13 @@
         <!-- Header -->
         <header class="text-center space-y-4 animate-up">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium mb-4">
-                <i data-lucide="star" class="w-3.5 h-3.5"></i> Verfasser-Portal
+                <i data-lucide="star" class="w-3.5 h-3.5"></i> By Leonard
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-slate-400">
-                Versions Hub
+                RinkView
             </h1>
             <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light">
-                Offizielle Dokumentation und Anmerkungen des Verfassers zu jedem Release.
+                Offizielle Dokumentation und Anmerkungen des Verfassers zu jedem Release von RinkView.
             </p>
         </header>
 
@@ -210,7 +210,7 @@
         </div>
 
         <footer class="text-center pt-8 border-t border-white/5 text-slate-600 text-xs">
-            <p>&copy; 2026 Versions Hub - Nur autorisierte Einträge</p>
+            <p>&copy; 2026 Versions Hub - Nur autorisierte Einträge lol als wäre ich autorisiert. Ne Spaß macht kein Scheiß leude</p>
         </footer>
     </div>
 
